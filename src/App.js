@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import SingleColor from './SingleColor'
+
+import Values from 'values.js'
 
 function App() {
+
+  const [colour, setColour] = useState('');
+  const [error, setError] = useState(false);
+  const [list, setList] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Submit works");
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <section className='container'>
+        form.
+      </section>
+      <section className="colors">
+        <h3>List goes here</h3>
+      </section>
+    </>
+    )
 }
 
-export default App;
+export default App
